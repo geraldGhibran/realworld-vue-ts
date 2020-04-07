@@ -41,6 +41,10 @@ export interface Author {
   following: boolean;
 }
 
+export interface ProfileResponse {
+  profile: Profile;
+}
+
 export interface ArticleResponse {
   articles?: Article[] | null;
   articlesCount: number;

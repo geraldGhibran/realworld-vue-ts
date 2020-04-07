@@ -55,12 +55,13 @@ import { Article } from '../store/models';
     ArticlePreview,
   },
 })
+
 export default class Home extends Vue {
   public feed: Article[] = [];
 
   public created() {
-    articles.refreshGlobalFeed().then(() => {
-      this.feed = articles.globalFeed;
+    articles.refreshFeed('global').then(() => {
+      this.feed = articles.feed;
     });
   }
 }
